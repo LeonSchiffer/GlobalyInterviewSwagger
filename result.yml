@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Globaly Interview Test Swagger
+  description: Swagger API for Globaly Interview Test
+  version: '1.0'
+  x-logo:
+    url: https://github.com/joolfe/logoBanner.png
+    backgroundColor: '#FFFFFF'
+    altText: logo
+  termsOfService: '#'
+  contact:
+    name: Bishal Gurung
+    url: https://grgbishal.com
+    email: grgbishal360@gmail.com
+  license:
+    name: MIT
+    url: https://es.wikipedia.org/wiki/Licencia_MIT
+servers:
+  - url: https://globally.grgbishal.com
+    description: server
+tags:
+  - name: Client
+paths:
+  /api/clients:
+    post:
+      tags:
+        - Client
+      summary: create new client
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Bishal Gurung
+                gender:
+                  type: string
+                  example: male
+                phone:
+                  type: integer
+                  example: '989898'
+                email:
+                  type: string
+                  example: mail@mail.com
+                address:
+                  type: string
+                  example: Bhairahawa
+                nationality:
+                  type: string
+                  example: Nepali
+                dob:
+                  type: string
+                  example: '2022-02-03'
+                educational_background:
+                  type: string
+                  example: Slc
+                preferred_contact_mode:
+                  type: string
+                  example: phone
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/clients:
+    get:
+      tags:
+        - Client
+      summary: get all clients
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

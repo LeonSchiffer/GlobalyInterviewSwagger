@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "f1e18dc5-2b4d-47cd-866a-bac02509b4c6",
+		"name": "Globally Hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32393807"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "create new client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Bishal Gurung",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "989898",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mail@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Bhairahawa",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "Nepali",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2022-02-03",
+									"type": "text"
+								},
+								{
+									"key": "educational_background",
+									"value": "Slc",
+									"type": "text"
+								},
+								{
+									"key": "preferred_contact_mode",
+									"value": "phone",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/clients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/clients?limit=&page=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8000",
+			"type": "string"
+		}
+	]
+}
